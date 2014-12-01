@@ -9,6 +9,7 @@ var express = require('express'),
 server.set('view engine', 'ejs');
 
 server.use('/public', express.static(__dirname + '/public'));
+server.use('/build', express.static(__dirname + '/build'));
 
 server.get('/', function(req, res) {
   var serverElement = React.renderToString(
@@ -17,6 +18,11 @@ server.get('/', function(req, res) {
   res.render('pages/index',
     {title: "Isomorphic Example",
     serverElement: serverElement});
+});
+
+server.get('/api/:location', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  res.json({caller: req.params.location});
 });
 
 

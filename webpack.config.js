@@ -8,7 +8,7 @@ module.exports = {
   output: {
     libraryTarget: "var",
     library: "examples",
-    path: './public/build',
+    path: './build',
     filename: "[name].js"
   },
   externals: {
