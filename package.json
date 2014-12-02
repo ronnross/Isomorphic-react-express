@@ -16,7 +16,10 @@
     "superagent": "^0.21.0"
   },
   "devDependencies": {
+    "connect-livereload": "^0.5.2",
     "file-loader": "^0.8.1",
+    "gulp": "^3.8.10",
+    "gulp-express": "^0.1.1",
     "jsx-loader": "^0.12.2",
     "webpack": "^1.4.13"
   }

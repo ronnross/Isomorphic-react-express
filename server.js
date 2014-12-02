@@ -1,13 +1,14 @@
 require('node-jsx').install({ extension: '.jsx' });
 
 var express = require('express'),
-    server = express(),
+    //server = express(),
+    server = module.exports.server = exports.server = express(),
     React = require('react'),
     HelloWorld = require('./elements/HelloWorld.jsx');
 
 
 server.set('view engine', 'ejs');
-
+server.use(require('connect-livereload')());
 server.use('/public', express.static(__dirname + '/public'));
 server.use('/build', express.static(__dirname + '/build'));
 
