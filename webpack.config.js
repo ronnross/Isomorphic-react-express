@@ -3,7 +3,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   entry: {
-    HelloWorld: "./elements/HelloWorld.jsx"
+    Client: "./client.js"
   },
   output: {
     libraryTarget: "var",
