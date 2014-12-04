@@ -7,8 +7,9 @@ Using Superagent to make both server-side and client-side request.
 steps to run
 --
 - npm install
-- webpack or webpack --watch
-- gulp server (for live reload)
+- npm start
+
+if need npm build will run webpack build
 
 App should be running at
 [localhost:3000](http://localhost:3000)
